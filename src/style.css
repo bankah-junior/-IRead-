@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", "courier", sans-serif;
+  color: #333;
+  transition: 500ms;
+}
+
+.loading,
+.error-msg {
+    display: grid;
+    place-content: center;
+    height: 20vh;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+/* Nabvar */
+.nav-container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  background-color: rgba(53, 65, 73, 0.5);
+}
+
+.navbar h1 {
+  color: #f1356d;
+  font-size: 30px;
+}
+
+.navbar .links {
+  margin-left: auto;
+}
+
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+  color: #ddd;
+}
+
+.navbar a:hover {
+  color: #f1356d;
+}
+
+.content {
+  margin: 0px auto;
+}
+
+/* Landing page */
+.hero-section {
+    width: 100%;
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-section.landing {
+    background-image: url('./img/hero-img.jpg');
+}
+
+.about-section {
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #263139;
+}
+
+.about-section .about-img {
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-section img {
+    width: 70%;
+    margin: 20px 10px 20px 0;
+    box-shadow: 5px 5px 5px 2px rgba(1,1,1,0.5);
+}
+
+.about-section .about-info {
+    max-width: 600px;
+    margin: 20px 10px 20px 10px;
+}
+
+.about-section .about-info h2,
+.about-section .about-info h4,
+.about-section .about-info p,
+.about-section .about-info button {
+    color: #ddd;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.about-section .about-info h2 {
+    font-size: 30px;
+}
+
+.about-section .about-info h4 {
+    font-size: 17px;
+}
+
+.about-section .about-info p {
+    line-height: 25px;
+}
+
+.bch-link {
+    color: #ddd;
+    padding: 5px;
+    border-radius: 8px;
+    margin: 50px 20px 10px 0;
+    text-decoration: none;
+    background-color: #f50f54;
+}
+
+button {
+    background-color: #f50f54;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover,
+.bch-link:hover {
+    background-color: #f1356d;
+}
+
+.books-cover-section {
+    background-color: #293136;
+}
+
+.books-cover-section .books-cover-heading {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.books-cover-section .books-cover-heading .bch-left {
+    max-width: 300px;
+    padding: 30px 0;
+}
+
+.books-cover-section .books-cover-heading .bch-right {
+    max-width: 500px;
+    padding: 30px;
+}
+
+.bch-left h2,
+.bch-right p {
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+.bch-right p {
+    line-height: 25px;
+}
+
+.books-cover-section .books-cover-imgs {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+
+.books-cover-section .books-cover-imgs img {
+    width: 15%;
+}
+
+.books-cover-section .books-cover-footer {
+    width: 100%;
+    padding: 30px 0;
+    display: grid;
+    place-content: center;
+}
+
+.books-cover-section .books-cover-footer h2 {
+    max-width: 450px;
+    text-align: center;
+    color: #ddd;
+}
+
+.books-cover-section .books-cover-footer p {
+    color: #ddd;
+    margin-top: 8px;
+    text-align: center;
+}
+
+/* All Books */
+.hero-section.all-books {
+    background-image: url('./img/books-hero.jpg');
+}
+
+.blog-list {
+    margin: 2.5rem 0;
+    padding: 0 20px;
+}
+
+.blog-preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.blog-preview {
+    max-width: 340px;
+    padding: 10px 16px;
+    margin: 20px 10px;
+    border: 1px solid #fafafa;
+}
+
+.blog-preview:hover {
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog-preview h2 {
+    font-size: 20px;
+    color: #f1356d;
+    margin-bottom: 8px;
+}
+
+.blog-preview a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.blog-snippet {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 8px;
+}
+
+/* New Book Post */
+.hero-section.new-books {
+    background-image: url('./img/new-book.jpg');
+}
+
+.create {
+    max-width: 100%;
+    text-align: center;
+}
+
+.create form {
+    margin: 4rem;
+}
+
+.create label {
+    text-align: left;
+    display: block;
+}
+
+.create h2 {
+    margin-top: 2rem;
+    font-size: 30px;
+    color: #f1356d;
+    margin-bottom: 30px;
+}
+
+.create input, .create textarea, .create select {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: block;
+}
+
+.create button {
+    background: #f1356d;
+    color: #fff;
+    border: 0;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Book Details */
+.hero-section.detail-book {
+    background-image: url('./img/detail-hero.jpg');
+}
+
+.blog-details h2 {
+    font-size: 30px;
+    color: #f1356d;
+    margin-bottom: 10px;
+}
+
+.blog-details article {
+    margin: 20px 20px;
+}
+
+.blog-details article p {
+    margin-bottom: 15px;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.blog-details article .longDescription {
+    line-height: 25px;
+    font-size: 15px;
+}
+
+.blog-details button {
+    background: #f1356d;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Footer Page */
+footer {
+    width: 100%;
+    height: 30vh;
+    background-image: url('./img/footer-img.jpg');
+    background-position: center;
+    background-size: cover;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+footer .footer-container {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .footer-container div {
+    margin: 10px 0;
+}
+
+footer .footer-container .logos {
+    display: flex;
+}
+
+footer .footer-container .logos div {
+    background-color: #ddd;
+    margin: 0 8px;
+    padding: 8px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+}
+
+footer .footer-container .logos div img {
+    width: 35px;
+
+}
+
+footer span {
+    color: #fff;
+}
+
+/*  */
